@@ -4,9 +4,11 @@
   "description": "Mouse tracking for Windows",
   "main": "index.js",
   "scripts": {
+    "build": "node-gyp configure && node-gyp build",
     "lint": "standard",
     "test": "node test/parallel-destroy && node test/parallel-unref && node test/sequence-destroy && node test/sequence-unref"
   },
+  "gypfile": true,
   "repository": {
     "type": "git",
     "url": "https://github.com/kapetan/win-mouse"
